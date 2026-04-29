@@ -168,21 +168,21 @@ O projeto esta estruturado para evoluir de forma incremental, mantendo a politic
 
 ### Curto prazo (governanca e previsibilidade)
 
-- Expandir a politica atual com validacoes mais detalhadas para servicos, firewall e SSH.
-- Melhorar o preview operacional para indicar impacto esperado, risco estimado e possiveis dependencias entre mudancas.
-- Enriquecer os relatorios com mais contexto tecnico para facilitar auditoria e troubleshooting.
-- Adicionar testes automatizados para os fluxos principais da CLI e para a geracao de playbooks.
+- Expandir a política atual com validações mais detalhadas para serviços, firewall e SSH.
+- Melhorar o preview operacional para indicar impacto esperado, risco estimado e possíveis dependências entre mudanças.
+- Enriquecer os relatórios com mais contexto tecnico para facilitar auditorias e troubleshooting.
+- Adicionar testes automatizados para os fluxos principais da CLI e para a geração de playbooks.
 
 ### Médio prazo (escala e padronização)
 
-- Evoluir a integracao com Ansible para usar `roles`, `templates` e organizacao por responsabilidades.
+- Evoluir a integração com Ansible para usar `roles`, `templates` e organizacao por responsabilidades.
 - Suportar perfis por papel de servidor, como `web`, `banco`, `bastion` e `jump host`.
-- Preparar um fluxo de aprovacao formal (ex.: registrar um identificador de ticket/OSW e manter trilha de auditoria).
-- Incluir capacidade de detectar drift entre o estado esperado da política e o estado real do host.
+- Preparar um fluxo de aprovação formal (ex.: registrar um identificador de ticket/OSW e manter trilha de auditoria).
+- Incluir capacidade de detectar drift entre a o estado esperado da política e o estado real do host.
 
 ### Longo prazo (conformidade e resiliência)
 
-- Suportar outras distribuicoes, comecando por Fedora/RHEL (`dnf`) e derivados.
+- Suportar outras distribuicoes, começando por Fedora/RHEL (`dnf`) e derivados.
 - Mapear controles para benchmarks reconhecidos, como CIS, para facilitar conformidade e evidencias.
 - Incorporar rollback orientado por política para mudancas seguras e reversíveis quando possível.
 - Preparar operacao em múltiplos hosts com inventários, grupos e ambientes distintos.
