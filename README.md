@@ -22,7 +22,7 @@ Implementação de processo de hardening em servidores Linux com foco inicial em
 ## Estrutura do repositório 
 
 ```
-projeto-hardening-linux/
+Server-Hardening/
   docs/
     arquitetura.md
     metodologia-avaliacao.md
