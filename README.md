@@ -104,9 +104,7 @@ hardener ansible --politica exemplos/politica_hardening_debian.json --executar -
 Na execução do playbook com `--executar`, também há confirmação interativa por padrão.
 Para cenários automatizados (CI/CD), use `--auto-confirmar`.
 
-## Exemplo de uso em ambiente profissional
-
-Cenário típico: executar hardening em um servidor de produção durante uma janela de manutenção, com aprovação formal do administrador e geração de evidências para auditoria.
+## Exemplo de uso
 
 1. Preparar diretório de evidências
 
@@ -153,7 +151,7 @@ hardener ansible --politica exemplos/politica_hardening_debian.json --executar -
 
 Observação: para automação (CI/CD), use `--auto-confirmar` somente quando a aprovação já tiver sido registrada externamente (mudança aprovada, ticket/OSW, janela de manutenção etc.).
 
-## Ferramentas sugeridas para validacao
+## Ferramentas sugeridas para validação 
 
 - `ss -tulpen` (servicos/portas)
 - `systemctl list-unit-files --type=service`
