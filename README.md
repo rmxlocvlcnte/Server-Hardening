@@ -162,34 +162,38 @@ Observação: para automação (CI/CD), use `--auto-confirmar` somente quando a 
 
 > Importante: execute apenas em ambientes autorizados.
 
-## Roadmap
+## Visão Futura (Roadmap)
 
-O projeto esta estruturado para crescer de forma incremental, mantendo a mesma politica declarativa como fonte principal de verdade.
+O projeto esta estruturado para evoluir de forma incremental, mantendo a politica declarativa como fonte principal de verdade e reforcando dois pilares: **auditabilidade** (o que foi alterado e por que) e **seguranca operacional** (preview + aprovacao antes de aplicar).
 
-### Curto prazo
+### Curto prazo (governanca e previsibilidade)
 
 - Expandir a politica atual com validacoes mais detalhadas para servicos, firewall e SSH.
 - Melhorar o preview operacional para indicar impacto esperado, risco estimado e possiveis dependencias entre mudancas.
 - Enriquecer os relatorios com mais contexto tecnico para facilitar auditoria e troubleshooting.
 - Adicionar testes automatizados para os fluxos principais da CLI e para a geracao de playbooks.
 
-### Medio prazo
+### Medio prazo (escala e padronizacao)
 
 - Evoluir a integracao com Ansible para usar `roles`, `templates` e organizacao por responsabilidades.
 - Suportar perfis por papel de servidor, como `web`, `banco`, `bastion` e `jump host`.
-- Permitir aprovacao formal antes da aplicacao, incluindo trilha de auditoria e historico de execucoes.
+- Preparar um fluxo de aprovacao formal (ex.: registrar um identificador de ticket/OSW e manter trilha de auditoria).
 - Incluir capacidade de detectar drift entre o estado esperado da politica e o estado real do host.
 
-### Longo prazo
+### Longo prazo (conformidade e resiliência)
 
-- Adicionar suporte a outras distribuicoes, comecando por Fedora/RHEL (`dnf`) e derivados.
+- Suportar outras distribuicoes, comecando por Fedora/RHEL (`dnf`) e derivados.
 - Mapear controles para benchmarks reconhecidos, como CIS, para facilitar conformidade e evidencias.
 - Incorporar rollback orientado por politica para mudancas seguras e reversiveis quando possivel.
-- Preparar o projeto para operacao em multiplos hosts com inventarios, grupos e ambientes distintos.
+- Preparar operacao em multiplos hosts com inventarios, grupos e ambientes distintos.
 
-### Linhas de expansao futuras
+### Linhas de evolucao contínua
 
 - Integracao com pipelines de CI/CD para validacao de politica antes da execucao.
 - Exportacao de evidencias em formatos consumiveis por times de governanca e compliance.
 - Catalogo de politicas versionadas por ambiente, criticidade e tipo de ativo.
 - Dashboards ou resumos executivos para acompanhamento de postura de hardening ao longo do tempo.
+
+### Objetivo final
+
+Transformar hardening em um processo repetivel, mensuravel e governado por politica, com baixa friccao para operacoes e alta confianca para auditoria.
