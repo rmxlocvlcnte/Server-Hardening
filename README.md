@@ -178,14 +178,14 @@ O projeto esta estruturado para evoluir de forma incremental, mantendo a politic
 - Evoluir a integracao com Ansible para usar `roles`, `templates` e organizacao por responsabilidades.
 - Suportar perfis por papel de servidor, como `web`, `banco`, `bastion` e `jump host`.
 - Preparar um fluxo de aprovacao formal (ex.: registrar um identificador de ticket/OSW e manter trilha de auditoria).
-- Incluir capacidade de detectar drift entre o estado esperado da politica e o estado real do host.
+- Incluir capacidade de detectar drift entre o estado esperado da política e o estado real do host.
 
 ### Longo prazo (conformidade e resiliência)
 
 - Suportar outras distribuicoes, comecando por Fedora/RHEL (`dnf`) e derivados.
 - Mapear controles para benchmarks reconhecidos, como CIS, para facilitar conformidade e evidencias.
-- Incorporar rollback orientado por politica para mudancas seguras e reversiveis quando possivel.
-- Preparar operacao em multiplos hosts com inventarios, grupos e ambientes distintos.
+- Incorporar rollback orientado por política para mudancas seguras e reversíveis quando possível.
+- Preparar operacao em múltiplos hosts com inventários, grupos e ambientes distintos.
 
 ### Linhas de evolução contínua
 
