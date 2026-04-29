@@ -1,0 +1,14 @@
+{
+  "nome_politica": "perfil_basico_debian",
+  "servicos_desativar": [
+    "avahi-daemon",
+    "cups"
+  ],
+  "portas_permitidas": [
+    22
+  ],
+  "habilitar_ufw": true,
+  "politica_padrao_entrada": "deny",
+  "politica_padrao_saida": "allow",
+  "permitir_ssh_apenas_com_chave": true
+}
