@@ -28,7 +28,7 @@ projeto-hardening-linux/
     metodologia-avaliacao.md
     playbook-validacao.md
   exemplos/
-    politica_hardening_debian.json
+    perfil_base.json
   scripts/
     instalar_dependencias.sh
   src/
@@ -72,14 +72,14 @@ hardener auditar --saida artefatos/baseline.json
 ### 3) Aplicar hardening
 
 ```bash
-hardener aplicar --politica exemplos/politica_hardening_debian.json
+hardener aplicar --politica exemplos/perfil_base.json
 ```
 
 O comando `aplicar` agora sempre mostra um preview das mudanças e pede confirmação do administrador (`SIM`) antes de executar.
 Para somente inspecionar sem alterar nada:
 
 ```bash
-hardener aplicar --politica exemplos/politica_hardening_debian.json --preview
+hardener aplicar --politica exemplos/perfil_base.json --preview
 ```
 
 ### 4) Rodar auditoria final e comparar
@@ -91,14 +91,14 @@ hardener comparar --antes artefatos/baseline.json --depois artefatos/pos_hardeni
 
 ### 5) Gerar playbook Ansible da mesma política
 
-```bash
-hardener ansible --politica exemplos/politica_hardening_debian.json --saida-playbook artefatos/hardening.yml
+```
+hardener ansible --politica exemplos/perfil_base.json --saida-playbook artefatos/hardening.yml
 ```
 
 Para executar diretamente no host local:
 
-```bash
-hardener ansible --politica exemplos/politica_hardening_debian.json --executar --inventario localhost,
+```
+hardener ansible --politica exemplos/perfil_base.json --executar --inventario localhost,
 ```
 
 Na execução do playbook com `--executar`, também há confirmação interativa por padrão.
@@ -121,13 +121,13 @@ hardener auditar --saida artefatos/baseline.json
 3. Gerar preview das mudanças e submeter para aprovação
 
 ```bash
-hardener aplicar --politica exemplos/politica_hardening_debian.json --preview
+hardener aplicar --politica exemplos/perfil_base.json --preview
 ```
 
 Depois que o administrador validar o preview, executar a aplicação efetiva (o comando exige `SIM` para continuar):
 
 ```bash
-hardener aplicar --politica exemplos/politica_hardening_debian.json
+hardener aplicar --politica exemplos/perfil_base.json
 ```
 
 4. Coletar auditoria pós-mudança e produzir comparativo
@@ -140,13 +140,13 @@ hardener comparar --antes artefatos/baseline.json --depois artefatos/pos_hardeni
 5. (Opcional) Gerar playbook Ansible a partir da mesma política
 
 ```bash
-hardener ansible --politica exemplos/politica_hardening_debian.json --saida-playbook artefatos/hardening.yml
+hardener ansible --politica exemplos/perfil_base.json --saida-playbook artefatos/hardening.yml
 ```
 
 Para executar o playbook em um inventário profissional (apenas após aprovação):
 
 ```bash
-hardener ansible --politica exemplos/politica_hardening_debian.json --executar --inventario inventories/producao.ini
+hardener ansible --politica exemplos/perfil_base.json --executar --inventario inventories/producao.ini
 ```
 
 Observação: para automação (CI/CD), use `--auto-confirmar` somente quando a aprovação já tiver sido registrada externamente (mudança aprovada, ticket/OSW, janela de manutenção etc.).
