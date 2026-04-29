@@ -9,17 +9,17 @@
 
 ## 2. Aplicacao do hardening
 
-- Aplicar politica definida em JSON.
+- Aplicar política definida em JSON.
 - Registrar log de cada acao.
 
-## 3. Pos-hardening (depois)
+## 3. Pós-hardening (depois)
 
 - Repetir coleta dos mesmos indicadores do baseline.
-- Comparar diferencas e validar reducao de exposicao.
+- Comparar diferenças e validar redução de exposição.
 
 ## 4. Criterios de sucesso
 
-- Reducao de servicos nao essenciais habilitados.
-- Reducao de portas abertas desnecessarias.
-- Firewall ativo e com politica restritiva de entrada.
-- Politicas de acesso remoto endurecidas (ex.: senha SSH desativada).
+- Redução de servicos não essenciais habilitados.
+- Redução de portas abertas desnecessárias.
+- Firewall ativo e com política restritiva de entrada.
+- Políticas de acesso remoto endurecidas (ex.: senha SSH desativada).
