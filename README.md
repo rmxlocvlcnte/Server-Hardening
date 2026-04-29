@@ -6,7 +6,7 @@ Implementação de processo de hardening em servidores Linux com foco inicial em
 
 - Reduzir superfície de ataque por meio de hardening automatizado.
 - Aplicar boas práticas de seguranca defensiva:
-  - desativação de servicos desnecessarios;
+  - desativação de serviços desnecessários;
   - configuração de firewall;
   - restrição de portas;
   - fortalecimento de políticas de acesso.
@@ -17,9 +17,9 @@ Implementação de processo de hardening em servidores Linux com foco inicial em
 
 - Distro-alvo inicial: Debian/Ubuntu e derivadas com `apt`.
 - Linguagem principal: Python.
-- Suporte opcional a scripts shell para operacoes de sistema.
+- Suporte opcional a scripts shell para operações de sistema.
 
-## Estrutura do repositorio
+## Estrutura do repositório 
 
 ```
 projeto-hardening-linux/
