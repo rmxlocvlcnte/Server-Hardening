@@ -1,15 +1,15 @@
-# Projeto de Hardening Linux (PT-BR)
+# Projeto de Hardening Linux
 
-Implementacao de processo de hardening em servidores Linux com foco inicial em distribuicoes baseadas em Debian (`apt`), com arquitetura preparada para expansao futura para Fedora (`dnf`) e outras distros.
+Implementação de processo de hardening em servidores Linux com foco inicial em distribuições baseadas em Debian (`apt`), com arquitetura preparada para expansão futura para Fedora (`dnf`) e outras distros.
 
 ## Objetivos
 
-- Reduzir superficie de ataque por meio de hardening automatizado.
-- Aplicar boas praticas de seguranca defensiva:
-  - desativacao de servicos desnecessarios;
-  - configuracao de firewall;
-  - restricao de portas;
-  - fortalecimento de politicas de acesso.
+- Reduzir superfície de ataque por meio de hardening automatizado.
+- Aplicar boas práticas de seguranca defensiva:
+  - desativação de servicos desnecessarios;
+  - configuração de firewall;
+  - restrição de portas;
+  - fortalecimento de políticas de acesso.
 - Comparar estado antes/depois com varreduras de seguranca.
 - Documentar processo de forma replicavel.
 
@@ -21,7 +21,7 @@ Implementacao de processo de hardening em servidores Linux com foco inicial em d
 
 ## Estrutura do repositorio
 
-```text
+```
 projeto-hardening-linux/
   docs/
     arquitetura.md
@@ -52,9 +52,9 @@ projeto-hardening-linux/
 4. Gerar comparativo (`comparar`).
 5. Registrar evidencias e licoes aprendidas.
 
-## Uso rapido
+## Uso rápido
 
-### 1) Instalar dependencias
+### 1) Instalar dependências
 
 ```bash
 bash scripts/instalar_dependencias.sh
@@ -75,7 +75,7 @@ hardener auditar --saida artefatos/baseline.json
 hardener aplicar --politica exemplos/politica_hardening_debian.json
 ```
 
-O comando `aplicar` agora sempre mostra um preview das mudancas e pede confirmacao do administrador (`SIM`) antes de executar.
+O comando `aplicar` agora sempre mostra um preview das mudanças e pede confirmação do administrador (`SIM`) antes de executar.
 Para somente inspecionar sem alterar nada:
 
 ```bash
@@ -89,7 +89,7 @@ hardener auditar --saida artefatos/pos_hardening.json
 hardener comparar --antes artefatos/baseline.json --depois artefatos/pos_hardening.json --saida artefatos/comparativo.md
 ```
 
-### 5) Gerar playbook Ansible da mesma politica
+### 5) Gerar playbook Ansible da mesma política
 
 ```bash
 hardener ansible --politica exemplos/politica_hardening_debian.json --saida-playbook artefatos/hardening.yml
@@ -101,8 +101,8 @@ Para executar diretamente no host local:
 hardener ansible --politica exemplos/politica_hardening_debian.json --executar --inventario localhost,
 ```
 
-Na execucao do playbook com `--executar`, tambem ha confirmacao interativa por padrao.
-Para cenarios automatizados (CI/CD), use `--auto-confirmar`.
+Na execução do playbook com `--executar`, também há confirmação interativa por padrão.
+Para cenários automatizados (CI/CD), use `--auto-confirmar`.
 
 ## Exemplo de uso em ambiente profissional
 
@@ -196,4 +196,4 @@ O projeto esta estruturado para evoluir de forma incremental, mantendo a politic
 
 ### Objetivo final
 
-Transformar hardening em um processo repetivel, mensuravel e governado por politica, com baixa friccao para operacoes e alta confianca para auditoria.
+Transformar hardening em um processo repetível, mensurável e governado por política, com baixa fricção para operações e alta confiança para auditoria.
