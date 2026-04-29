@@ -173,7 +173,7 @@ O projeto esta estruturado para evoluir de forma incremental, mantendo a politic
 - Enriquecer os relatorios com mais contexto tecnico para facilitar auditoria e troubleshooting.
 - Adicionar testes automatizados para os fluxos principais da CLI e para a geracao de playbooks.
 
-### Medio prazo (escala e padronizacao)
+### Médio prazo (escala e padronização)
 
 - Evoluir a integracao com Ansible para usar `roles`, `templates` e organizacao por responsabilidades.
 - Suportar perfis por papel de servidor, como `web`, `banco`, `bastion` e `jump host`.
@@ -187,11 +187,11 @@ O projeto esta estruturado para evoluir de forma incremental, mantendo a politic
 - Incorporar rollback orientado por politica para mudancas seguras e reversiveis quando possivel.
 - Preparar operacao em multiplos hosts com inventarios, grupos e ambientes distintos.
 
-### Linhas de evolucao contínua
+### Linhas de evolução contínua
 
-- Integracao com pipelines de CI/CD para validacao de politica antes da execucao.
-- Exportacao de evidencias em formatos consumiveis por times de governanca e compliance.
-- Catalogo de politicas versionadas por ambiente, criticidade e tipo de ativo.
+- Integração com pipelines de CI/CD para validação de política antes da execução.
+- Exportação de evidências em formatos consumíveis por times de governanca e compliance.
+- Catalogo de políticas versionadas por ambiente, criticidade e tipo de ativo.
 - Dashboards ou resumos executivos para acompanhamento de postura de hardening ao longo do tempo.
 
 ### Objetivo final
